@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Changelog Online Smart SPD 2025</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* CSS untuk tampilan terminal retro */
+        body {
+            background-color: #000000;
+            color: #33FF33; /* Warna hijau limau */
+            font-family: 'IBM Plex Mono', monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Style untuk judul pengganti ASCII Art */
+        .header-title {
+            text-align: center;
+            font-size: 1.5em;
+            font-weight: 700;
+            color: #90ee90;
+            text-shadow: 0 0 5px #33FF33;
+            margin-bottom: 40px;
+        }
+
+        h1, h2 {
+            font-weight: 700;
+            color: #90ee90; /* Hijau lebih terang untuk judul */
+            text-shadow: 0 0 5px #33FF33;
+        }
+
+        h1 {
+            font-size: 1.4em;
+            margin-bottom: 2em;
+        }
+
+        h2 {
+            font-size: 1.1em;
+            border-bottom: 1px dashed #33FF33;
+            padding-bottom: 5px;
+            margin-top: 2.5em;
+        }
+        
+        ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+
+        li::before {
+            content: "> "; /* Meniru prompt atau bullet point terminal */
+            margin-right: 10px;
+        }
+        
+        /* Sub-list untuk detail lebih dalam */
+        ul ul {
+            padding-left: 20px;
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        ul ul li::before {
+            content: "- ";
+        }
+
+        /* Style untuk link navigasi (Home) */
+        .nav-link {
+            color: #90ee90;
+            text-decoration: none;
+        }
+
+        .nav-link:hover {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+        
+        .nav-container {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        /* Animasi untuk kursor berkedip */
+        .cursor {
+            display: inline-block;
+            background-color: #33FF33;
+            width: 9px;
+            height: 1.2em;
+            animation: blink 1s step-end infinite;
+            box-shadow: 0 0 5px #33FF33;
+        }
+
+        @keyframes blink {
+            from, to { background-color: transparent; }
+            50% { background-color: #33FF33; }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+        <div class="nav-container">
+            <a href="https://linktr.ee/sppd_online" class="nav-link">(Home)</a>
+        </div>
+
+        <div class="header-title">
+            <p>SMART SPD by @TOMMY</p>
+        </div>
+
+        <h1>C:\> LOAD "Online Smart SPD 2025\version_history.log"<span class="cursor"></span></h1>
+
+        <section id="version-history">
+
+            <h2>[ Versi 2.0 ] - Integrasi Lampiran & Refactor - 26 Sep 2025</h2>
+            <ul>
+                <li>Penambahan fitur upload lampiran (gambar/foto) per pegawai.</li>
+                <li>Pembuatan PDF gabungan untuk lampiran dengan halaman judul dinamis.</li>
+                <li>Penyempurnaan UI/UX dengan modal notifikasi dan progress bar yang lebih informatif.</li>
+                <li>Refactor dan perapian seluruh script untuk kemudahan maintenance.</li>
+            </ul>
+
+            <h2>[ Versi 1.4 ] - Halaman Changelog - 25 Sep 2025</h2>
+            <ul>
+                <li>Pembuatan halaman changelog.</li>
+            </ul>
+            
+            <h2>[ Versi 1.3 ] - Peningkatan Stabilitas - 20 Sep 2025</h2>
+            <ul>
+                <li>Perbaikan logika penanganan error saat ekspor PDF.</li>
+                <li>Optimasi penulisan data ke Google Sheets untuk mengurangi waktu tunggu.</li>
+                <li>Penambahan fitur "Muat Data Sesi Terakhir" untuk melanjutkan pekerjaan yang tertunda.</li>
+            </ul>
+
+            <h2>[ Versi 1.2 ] - Fitur Pengiriman Email - 18 Sep 2025</h2>
+            <ul>
+                <li>Pengiriman otomatis hasil PDF dalam format ZIP ke email pengguna.</li>
+            </ul>
+
+            <h2>[ Versi 1.1 ] - Peningkatan Antarmuka & UX - 17 Sep 2025</h2>
+            <ul>
+                <li>Implementasi antarmuka yang dinamis di sisi pengguna (frontend).
+                    <ul>
+                        <li>Fungsi untuk menambah dan menghapus form pegawai secara real-time.</li>
+                        <li>Fungsi untuk memuat data dari sesi sebelumnya agar tidak perlu input ulang.</li>
+                        <li>Pembuatan model tabulasi untuk Data Umum dan Data Pegawai.</li>
+                    </ul>
+                </li>
+                <li>Penambahan Tabel Ringkasan untuk menampilkan data pegawai yang aktif di sesi.</li>
+                <li>Pengembangan sistem notifikasi dan konfirmasi (pop-up) untuk interaksi pengguna.</li>
+            </ul>
+
+            <h2>[ Versi 1.0 ] - Rilis Awal & Fungsionalitas Inti - 15 Sep 2025</h2>
+            <ul>
+                <li>Rilis awal aplikasi web Online Smart SPD 2025.</li>
+                <li>Struktur dasar aplikasi:
+                    <ul>
+                        <li>Frontend: Halaman HTML yang Mobile Friendly.</li>
+                        <li>Backend: Menggunakan Google Apps Script.</li>
+                    </ul>
+                </li>
+                <li>Fungsionalitas inti:
+                    <ul>
+                        <li>Penerimaan dan perekaman data input dari formulir web.</li>
+                        <li>Penyimpanan data log historis ke dalam sheet.</li>
+                        <li>Pembuatan PDF otomatis dari template Google Sheets (Rincian, Kuitansi, SPD 1 & 2).</li>
+                    </ul>
+                </li>
+            </ul>
+
+        </section>
+
+        <p style="margin-top: 40px;">C:\Online Smart SPD 2025\> <span class="cursor"></span></p>
+        
+        <div class="nav-container" style="margin-top: 40px;">
+            <a href="https://linktr.ee/sppd_online" class="nav-link">(Home)</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
